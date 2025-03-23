@@ -9,30 +9,48 @@ import {
 import { useState } from 'react'
 
 const projects = [
-  { 
-    image: "https://shyam-world-trade.s3.eu-north-1.amazonaws.com/1741366329165.png", 
+ {
+    image: "https://shyam-world-trade.s3.eu-north-1.amazonaws.com/1742709534716.png",
+    title: "Portfolio website",
+    link: "https://checkout-iota-rosy.vercel.app/",
+    description: "Personal portfolio website"
+  },
+  {
+    image: "https://shyam-world-trade.s3.eu-north-1.amazonaws.com/1742710843636.png",
     title: "E-Commerce client",
     link: "https://soft-world-client-shyams-projects-623c4087.vercel.app/",
-    description: "Full-stack e-commerce platform of paid software" 
+    description: "Full-stack e-commerce platform of paid software"
   },
-  { 
-    image: "https://shyam-world-trade.s3.eu-north-1.amazonaws.com/1742452644875.png", 
-    title: "PassSG", 
-    link: "https://password-manager-shyams-projects.vercel.app/", 
-    description: "Secure password manager application" 
+  {
+    image: "https://shyam-world-trade.s3.eu-north-1.amazonaws.com/1742711051467.png",
+    title: "E-commerce admin",
+    link: "https://ecomm-admin-orpin.vercel.app",
+    description: "Admin dashboard for e-commerce platform"
   },
-  { 
-    image: "https://shyam-world-trade.s3.eu-north-1.amazonaws.com/1742453005644.png", 
-    title: "SMG_Link",
-    link: "https://bitlink-shyams-projects.vercel.app/", 
-    description: "URL shortener and analytics dashboard" 
+  {
+    image: "https://shyam-world-trade.s3.eu-north-1.amazonaws.com/1742452644875.png",
+    title: "Password manager",
+    link: "https://password-manager-five-ivory.vercel.app/",
+    description: "Secure password manager application"
   },
-  { 
-    image: "https://shyam-world-trade.s3.eu-north-1.amazonaws.com/1742453306935.png", 
-    title: "Ecommerce admin",
-    link: "https://ecomm-admin-orpin.vercel.app", 
-    description: "Admin dashboard for e-commerce platform" 
-  }
+  {
+    image: "https://shyam-world-trade.s3.eu-north-1.amazonaws.com/1742453005644.png",
+    title: "URL shortener",
+    link: "https://url-shortner-omega-seven.vercel.app/",
+    description: "URL shortener and analytics dashboard"
+  },
+  {
+    image: "https://shyam-world-trade.s3.eu-north-1.amazonaws.com/1742749360219.png",
+    title: "Todo List",
+    link: "https://todolist-mlnzsbjhy-shyams-projects-623c4087.vercel.app/",
+    description: "Simple todo list application"
+  },
+  {
+    image: "https://shyam-world-trade.s3.eu-north-1.amazonaws.com/1742749641662.png",
+    title: "TIC TAC TOE",
+    link: "https://tictactoe-five-ruby.vercel.app/",
+    description: "Simple tic tac toe game"
+  },
 ]
 
 const skills = [
@@ -223,7 +241,7 @@ PROJECTS
                   transition={{ delay: i * 0.2 }}
                   className="group relative overflow-hidden rounded-2xl"
                 >
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-transparent z-10" />
+                  <div className="inset-0 bg-gradient-to-t from-gray-900/90 via-transparent z-10" />
                   <img
                     src={project.image}
                     width={600}
