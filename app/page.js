@@ -192,7 +192,7 @@ export default function Home() {
                 <span className="bg-gradient-to-r from-emerald-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
                   Full-Stack Developer
                 </span>
-                <a className='ml-4 bg-zinc-200 text-black px-4 py-2 rounded' href="https://shyam-world-trade.s3.eu-north-1.amazonaws.com/1742751575477.pdf" download>
+                <a className='ml-4 mt-2 bg-zinc-200 text-black px-4 py-2 rounded' href="https://shyam-world-trade.s3.eu-north-1.amazonaws.com/1742751575477.pdf" download>
                   <button>Download CV</button>
                 </a>
               </motion.span>
