@@ -16,6 +16,14 @@ const projects = [
     description: "Personal portfolio website"
   },
   {
+    
+    image: "https://shyam-world-trade.s3.eu-north-1.amazonaws.com/1743239575496.png",
+    title: "Blogging website",
+    link: "https://shyamblog-net.vercel.app/",
+    description: "A personal blogging website"
+  
+  },
+  {
     image: "https://shyam-world-trade.s3.eu-north-1.amazonaws.com/1742710843636.png",
     title: "E-Commerce client",
     link: "https://soft-world-client-shyams-projects-623c4087.vercel.app/",
