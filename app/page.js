@@ -17,7 +17,7 @@ const projects = [
   },
   {
     
-    image: "https://shyam-world-trade.s3.eu-north-1.amazonaws.com/1743239575496.png",
+    image: "/blogging.png",
     title: "Blogging website",
     link: "https://shyamblog-net.vercel.app/",
     description: "A personal blogging website"
