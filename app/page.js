@@ -9,28 +9,28 @@ import {
 import { useState } from 'react'
 
 const projects = [
- {
-    image: "https://shyam-world-trade.s3.eu-north-1.amazonaws.com/1742709534716.png",
-    title: "Portfolio website",
-    link: "https://checkout-iota-rosy.vercel.app/",
-    description: "Personal portfolio website"
+  {
+    image: "voiceTOtext.png",
+    title: "Voice to Text notes",
+    link: "https://voice-t-otext-notes.vercel.app/",
+    description: "Voice to text notes converter"
   },
   {
     
-    image: "/blogging.png",
+    image: "blog.png",
     title: "Blogging website",
-    link: "https://shyamblog-net.vercel.app/",
+    link: "https://shyamblog-net.vercel.app",
     description: "A personal blogging website"
   
   },
   {
-    image: "https://shyam-world-trade.s3.eu-north-1.amazonaws.com/1742710843636.png",
+    image:"ecomclient.png",
     title: "E-Commerce client",
     link: "https://soft-world-client-shyams-projects-623c4087.vercel.app/",
     description: "Full-stack e-commerce platform of paid software"
   },
   {
-    image: "https://shyam-world-trade.s3.eu-north-1.amazonaws.com/1742711051467.png",
+    image: "admin.png",
     title: "E-commerce admin",
     link: "https://ecomm-admin-orpin.vercel.app",
     description: "Admin dashboard for e-commerce platform"
@@ -42,7 +42,7 @@ const projects = [
     description: "Secure password manager application"
   },
   {
-    image: "https://shyam-world-trade.s3.eu-north-1.amazonaws.com/1742453005644.png",
+    image: "link.png",
     title: "URL shortener",
     link: "https://url-shortner-omega-seven.vercel.app/",
     description: "URL shortener and analytics dashboard"
