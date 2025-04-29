@@ -27,7 +27,7 @@ const projects = [
     image:"ecomclient.png",
     title: "E-Commerce client",
     link: "https://soft-world-client-shyams-projects-623c4087.vercel.app/",
-    description: "Full-stack e-commerce platform of paid software"
+    description: "E-commerce platform"
   },
   {
     image: "admin.png",
