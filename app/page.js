@@ -1,13 +1,12 @@
-'use client'
+"use client"
 import { motion, useScroll, useTransform } from 'framer-motion'
 import Layout from '@/components/Layout'
-import { TbApi } from 'react-icons/tb';
-import { FaReact, FaNodeJs, FaPython, FaHtml5, FaCss3, FaJs, FaGit, FaGithub, FaCode  } from 'react-icons/fa';
-import { 
-  SiNextdotjs, SiExpress, SiTailwindcss, SiMongodb, SiCplusplus, SiRedux 
-} from 'react-icons/si';
+import { TbApi } from 'react-icons/tb'
+import { FaReact, FaNodeJs, FaPython, FaHtml5, FaCss3, FaJs, FaGit, FaGithub, FaCode } from 'react-icons/fa'
+import { SiNextdotjs, SiExpress, SiTailwindcss, SiMongodb, SiCplusplus, SiRedux } from 'react-icons/si'
 import { useState } from 'react'
 
+// ... (keep your projects and skills data same)
 const projects = [
   {
     image: "voiceTOtext.png",
@@ -16,15 +15,15 @@ const projects = [
     description: "Voice to text notes converter"
   },
   {
-    
+
     image: "blog.png",
     title: "Blogging website",
     link: "https://shyamblog-net.vercel.app",
     description: "A personal blogging website"
-  
+
   },
   {
-    image:"ecomclient.png",
+    image: "ecomclient.png",
     title: "E-Commerce client",
     link: "https://soft-world-client-shyams-projects-623c4087.vercel.app/",
     description: "E-commerce platform"
@@ -67,55 +66,43 @@ const skills = [
   { name: "CSS3", icon: FaCss3, x: 15, y: 30 },
   { name: "JavaScript", icon: FaJs, x: 15, y: 45 },
   { name: "ES6/ES5", icon: FaJs, x: 15, y: 60 },
-  
+
   // React Ecosystem
   { name: "React", icon: FaReact, x: 30, y: 20 },
   { name: "Next.js", icon: SiNextdotjs, x: 30, y: 40 },
   { name: "Redux", icon: SiRedux, x: 30, y: 60 },
-  
+
   // Backend
   { name: "Node.js", icon: FaNodeJs, x: 50, y: 25 },
   { name: "Express.js", icon: SiExpress, x: 50, y: 45 },
-  
+
   // Database
   { name: "MongoDB", icon: SiMongodb, x: 70, y: 35 },
-  
+
   // Styling
   { name: "Tailwind CSS", icon: SiTailwindcss, x: 70, y: 55 },
-  
+
   // Programming
   { name: "Python", icon: FaPython, x: 85, y: 20 },
   { name: "C", icon: SiCplusplus, x: 85, y: 40 },
   { name: "C++", icon: SiCplusplus, x: 85, y: 60 },
-  
+
   // Tools
   { name: "Git", icon: FaGit, x: 50, y: 75 },
   { name: "GitHub", icon: FaGithub, x: 65, y: 75 },
-  
+
   // Concepts
   { name: "DSA", icon: FaCode, x: 15, y: 75 },
   { name: "API Integration", icon: TbApi, x: 30, y: 75 },
   { name: "Responsive UI", icon: FaCss3, x: 85, y: 75 }
 ];
 
-const connections = [
-  [0, 1],
-  [1, 2]
-]
-
 export default function Home() {
-  
   const { scrollYProgress } = useScroll()
-  const scaleX = useTransform(scrollYProgress, [0, 1], [0, 1])
-  
-  // For external links, use window.location.href
-  const handleProjectClick = (project) => {
-    window.location.href = project.link;
-  }
+  const scaleX = useTransform(scrollYProgress, [0, 1], [0.2, 1])
+  const [activeProject, setActiveProject] = useState(null)
 
-  const [Name, setName] = useState('')
-  const [Email, setEmail] = useState('')
-  const [Message, setMessage] = useState('')
+  // ... keep your existing handlers and state
 
   const handlechange = (e) => {
     if (e.target.name === 'Name') {
@@ -126,6 +113,9 @@ export default function Home() {
       setMessage(e.target.value)
     }
   }
+  const [Name, setName] = useState('')
+  const [Email, setEmail] = useState('')
+  const [Message, setMessage] = useState('')
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -150,82 +140,65 @@ export default function Home() {
   return (
     <Layout>
       {/* Animated Scroll Progress */}
-      <motion.div 
-        className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-400 to-cyan-400 z-50"
+      <motion.div
+        className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-400 via-cyan-400 to-purple-400 z-50"
         style={{ scaleX }}
       />
 
-      {/* Floating Particles Background */}
-      <div className="fixed inset-0 z-0 opacity-20">
-        {[...Array(50)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-1 h-1 bg-emerald-400 rounded-full"
-            initial={{
-              x: Math.random() * 100 + 'vw',
-              y: Math.random() * 100 + 'vh'
-            }}
-            animate={{
-              x: ['0%', '100%', '0%'],
-              y: ['0%', '100%', '0%'],
-              transition: {
-                duration: 10 + Math.random() * 20,
-                repeat: Infinity,
-                repeatType: 'mirror'
-              }
-            }}
-          />
-        ))}
+      {/* Animated Grid Background */}
+      <div className="fixed inset-0 z-0 opacity-10">
+        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-repeat [mask-image:linear-gradient(180deg,white,transparent)]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-emerald-400/10 to-cyan-400/10" />
       </div>
 
       {/* Hero Section */}
-      <section className="min-h-screen relative flex items-center px-4">
-        <div className="container mx-auto">
+      <section className="min-h-screen relative flex items-center px-4 overflow-hidden">
+        <div className="container mx-auto relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="relative z-10"
+            className="text-center"
           >
-            <h1 className="text-6xl md:text-8xl font-bold text-center mb-8">
-              <span className="bg-gradient-to-r from-emerald-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                Shyam Ghosh
-              </span>
-              <motion.span 
-                className="block text-xl md:text-3xl mt-6 text-gray-400"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.5 }}
-              >
-                <span className="bg-gradient-to-r from-emerald-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                  Full-Stack Developer
-                </span>
-                <a className='ml-4 mt-2 bg-zinc-200 text-black px-4 py-[1px] rounded' href="https://shyam-world-trade.s3.eu-north-1.amazonaws.com/1742751575477.pdf" download>
-                  <button>Download CV</button>
-                </a>
-              </motion.span>
-            </h1>
-
-            {/* Animated Tech Grid */}
-            <motion.div 
-              className="grid grid-cols-3 gap-4 max-w-4xl mx-auto"
-              initial={{ scale: 0.8 }}
-              whileInView={{ scale: 1 }}
-              viewport={{ once: true }}
+            <motion.div
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              className="inline-block mb-8 relative"
             >
-              {['Full-Stack', 'SEO', 'UI/UX Design', 'Blogging'].map((tech) => (
-                <motion.div
-                  key={tech}
-                  whileHover={{ scale: 1.05 }}
-                  className="p-6 bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl border border-emerald-400/20 backdrop-blur-lg"
-                >
-                  <div className="text-emerald-400 mb-2">
-                    <FaCode className="text-3xl" />
-                  </div>
-                  <h3 className="text-xl font-semibold">{tech}</h3>
-                  <p className="text-gray-400 text-sm mt-2">Innovation Driven Solutions</p>
-                </motion.div>
-              ))}
+              <div className="absolute inset-0 bg-emerald-400/20 blur-3xl rounded-full" />
+              <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-emerald-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent relative">
+                Shyam Ghosh
+              </h1>
+            </motion.div>
+
+            <motion.p
+              className="text-xl md:text-3xl text-gray-400 mb-12 max-w-2xl mx-auto"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.3 }}
+            >
+              I'm a software developer with a passion for building web applications
+            </motion.p>
+
+            <motion.div
+              className="flex justify-center gap-4"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.6 }}
+            >
+              <a
+                href="https://shyam-world-trade.s3.eu-north-1.amazonaws.com/1742751575477.pdf"
+                download
+                className="relative group inline-flex items-center px-8 py-4 rounded-full bg-emerald-400/10 border border-emerald-400/20 hover:bg-emerald-400/20 transition-all"
+              >
+                <span className="text-emerald-400 mr-2">Download CV</span>
+                <div className="w-4 h-4 group-hover:translate-x-1 transition-transform">
+                  <svg viewBox="0 0 24 24" fill="none" className="text-cyan-400">
+                    <path d="M12 16L16 12M12 16L8 12M12 16L12 8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                  </svg>
+                </div>
+                <div className="absolute inset-0 bg-emerald-400/10 blur-md" />
+              </a>
             </motion.div>
           </motion.div>
         </div>
@@ -237,10 +210,10 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            className="bg-gray-900/80 backdrop-blur-xl rounded-[2rem] border border-emerald-400/20 p-8"
+            className="backdrop-blur-xl rounded-[2rem] p-8 border border-emerald-400/20"
           >
             <h2 className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
-PROJECTS
+              PROJECTS
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -278,59 +251,33 @@ PROJECTS
           </motion.div>
         </div>
       </section>
-
-      {/* Skills Network */}
+      {/* Skills Section */}
       <section className="min-h-screen relative py-20 px-4">
         <div className="container mx-auto">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            className="bg-gray-900/80 backdrop-blur-xl rounded-[2rem] border border-emerald-400/20 p-8"
+            className="backdrop-blur-xl rounded-[2rem] p-8"
           >
             <h2 className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
-             Technical Skills
+              Technical Arsenal
             </h2>
 
-            <div className="relative h-[600px] w-full bg-gray-950 rounded-2xl">
-              {skills.map((skill) => (
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+              {skills.map((skill, i) => (
                 <motion.div
-                  key={skill.name}
-                  className="absolute w-20 h-20 bg-emerald-400/10 border border-emerald-400/20 rounded-xl flex items-center justify-center backdrop-blur-lg"
-                  style={{
-                    left: `${skill.x}%`,
-                    top: `${skill.y}%`
-                  }}
-                  whileHover={{ scale: 1.1 }}
-                  drag
-                  dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
+                  key={i}
+                  initial={{ scale: 0 }}
+                  whileInView={{ scale: 1 }}
+                  transition={{ delay: i * 0.05 }}
+                  className="p-6 bg-gray-900/50 rounded-2xl border border-emerald-400/20 hover:border-emerald-400/40 transition-colors group"
                 >
-                  <skill.icon className="text-3xl text-emerald-400" />
-                  <span className="absolute bottom-2 text-xs font-bold">{skill.name}</span>
+                  <div className="flex flex-col items-center">
+                    <skill.icon className="w-12 h-12 mb-4 text-emerald-400 group-hover:text-cyan-400 transition-colors" />
+                    <span className="text-sm font-medium text-center">{skill.name}</span>
+                  </div>
                 </motion.div>
               ))}
-              
-              {/* Animated Connections */}
-              <svg className="absolute inset-0">
-                {connections.map(([start, end]) => (
-                  <motion.line
-                    key={`${start}-${end}`}
-                    x1={skills[start].x + 10}
-                    y1={skills[start].y + 10}
-                    x2={skills[end].x + 10}
-                    y2={skills[end].y + 10}
-                    stroke="rgba(16, 185, 129, 0.2)"
-                    strokeWidth="2"
-                    animate={{
-                      strokeDasharray: ["0, 1000", "1000, 0"],
-                    }}
-                    transition={{
-                      duration: 3,
-                      repeat: Infinity,
-                      ease: "linear"
-                    }}
-                  />
-                ))}
-              </svg>
             </div>
           </motion.div>
         </div>
@@ -342,10 +289,10 @@ PROJECTS
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            className="bg-gray-900/80 backdrop-blur-xl rounded-[2rem] border border-emerald-400/20 p-8"
+            className="backdrop-blur-xl rounded-[2rem] p-8 border border-emerald-400/20"
           >
             <h2 className="text-4xl font-bold mb-8 text-center bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
-              CONNECT TO ME 
+              CONNECT TO ME
             </h2>
 
             <form className="space-y-6">
