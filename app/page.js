@@ -177,7 +177,7 @@ export default function Home() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
             >
-              I'm a software developer with a passion for building web applications
+              I&apos;m a software developer with a passion for building web applications
             </motion.p>
 
             <motion.div
