@@ -180,26 +180,7 @@ export default function Home() {
               I&apos;m a software developer with a passion for building web applications
             </motion.p>
 
-            <motion.div
-              className="flex justify-center gap-4"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.6 }}
-            >
-              <a
-                href="https://shyam-world-trade.s3.eu-north-1.amazonaws.com/1742751575477.pdf"
-                download
-                className="relative group inline-flex items-center px-8 py-4 rounded-full bg-emerald-400/10 border border-emerald-400/20 hover:bg-emerald-400/20 transition-all"
-              >
-                <span className="text-emerald-400 mr-2">Download CV</span>
-                <div className="w-4 h-4 group-hover:translate-x-1 transition-transform">
-                  <svg viewBox="0 0 24 24" fill="none" className="text-cyan-400">
-                    <path d="M12 16L16 12M12 16L8 12M12 16L12 8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                  </svg>
-                </div>
-                <div className="absolute inset-0 bg-emerald-400/10 blur-md" />
-              </a>
-            </motion.div>
+           
           </motion.div>
         </div>
       </section>
