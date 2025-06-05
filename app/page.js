@@ -143,6 +143,11 @@ export default function Home() {
     }
   }
 
+    const handleProjectClick = (project) => {
+  // Example: navigate, open modal, or log
+  window.open(project.link, '_blank');
+}
+
   return (
     <Layout>
       {/* Animated Scroll Progress */}
