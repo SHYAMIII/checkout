@@ -16,45 +16,45 @@ const projects = [
   },
   {
     image: "voiceTOtext.png",
-    title: "Voice to Text notes",
+    title: "SpeakEasy 2.0",
     link: "https://voice-t-otext-notes.vercel.app/",
     description: "Voice to text notes converter"
   },
   {
 
     image: "blog.png",
-    title: "Blogging website",
+    title: "ShyamBlog",
     link: "https://shyamblog-net.vercel.app",
     description: "A personal blogging website"
 
   },
   {
     image: "ecomclient.png",
-    title: "E-Commerce client",
+    title: "IITSKiLLMART",
     link: "https://soft-world-client-shyams-projects-623c4087.vercel.app/",
     description: "E-commerce platform"
   },
   {
     image: "admin.png",
-    title: "E-commerce admin",
+    title: "IITSKiLLMART admin",
     link: "https://ecomm-admin-orpin.vercel.app",
     description: "Admin dashboard for e-commerce platform"
   },
   {
     image: "https://shyam-world-trade.s3.eu-north-1.amazonaws.com/1742452644875.png",
-    title: "Password manager",
+    title: "PassSG",
     link: "https://password-manager-five-ivory.vercel.app/",
     description: "Secure password manager application"
   },
   {
     image: "link.png",
-    title: "URL shortener",
+    title: "SMGLink",
     link: "https://url-shortner-omega-seven.vercel.app/",
     description: "URL shortener and analytics dashboard"
   },
   {
     image: "https://shyam-world-trade.s3.eu-north-1.amazonaws.com/1742749360219.png",
-    title: "Todo List",
+    title: "TODO",
     link: "https://todolist-mlnzsbjhy-shyams-projects-623c4087.vercel.app/",
     description: "Simple todo list application"
   },
