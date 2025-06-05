@@ -8,6 +8,12 @@ import { useState } from 'react'
 
 // ... (keep your projects and skills data same)
 const projects = [
+    {
+    image: "chattify.png",
+    title: "Chattify",
+    link: "https://chatweb-bt11.onrender.com",
+    description: "realtime chatapp with voice and video calls"
+  },
   {
     image: "voiceTOtext.png",
     title: "Voice to Text notes",
