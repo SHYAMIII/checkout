@@ -8,12 +8,19 @@ import { useState } from 'react'
 
 // ... (keep your projects and skills data same)
 const projects = [
+     {
+    image: "twilio.png",
+    title: "AI_call_bot",
+    link: "https://github.com/SHYAMIII/ai_call_agent",
+    description: "AI call bot to manage costumer's query"
+  },
     {
     image: "chattify.png",
     title: "Chattify",
     link: "https://chatweb-bt11.onrender.com",
     description: "realtime chatapp with voice and video calls"
   },
+    
   {
     image: "voiceTOtext.png",
     title: "SpeakEasy 2.0",
