@@ -10,7 +10,7 @@ import { useState } from 'react'
 const projects = [
      {
     image: "twilio.png",
-    title: "AI_call_bot",
+    title: "AI_SDR",
     link: "https://github.com/SHYAMIII/ai_call_agent",
     description: "AI call bot to manage costumer's query"
   },
@@ -21,12 +21,7 @@ const projects = [
     description: "realtime chatapp with voice and video calls"
   },
     
-  {
-    image: "voiceTOtext.png",
-    title: "SpeakEasy 2.0",
-    link: "https://voice-t-otext-notes.vercel.app/",
-    description: "Voice to text notes converter"
-  },
+
   {
 
     image: "blog.png",
@@ -47,30 +42,15 @@ const projects = [
     link: "https://ecomm-admin-orpin.vercel.app",
     description: "Admin dashboard for e-commerce platform"
   },
-  {
-    image: "https://shyam-world-trade.s3.eu-north-1.amazonaws.com/1742452644875.png",
-    title: "PassSG",
-    link: "https://password-manager-five-ivory.vercel.app/",
-    description: "Secure password manager application"
+
+       {
+    image: "voiceTOtext.png",
+    title: "SpeakEasy 2.0",
+    link: "https://voice-t-otext-notes.vercel.app/",
+    description: "Voice to text notes converter"
   },
-  {
-    image: "link.png",
-    title: "SMGLink",
-    link: "https://url-shortner-omega-seven.vercel.app/",
-    description: "URL shortener and analytics dashboard"
-  },
-  {
-    image: "https://shyam-world-trade.s3.eu-north-1.amazonaws.com/1742749360219.png",
-    title: "TODO",
-    link: "https://todolist-mlnzsbjhy-shyams-projects-623c4087.vercel.app/",
-    description: "Simple todo list application"
-  },
-  {
-    image: "https://shyam-world-trade.s3.eu-north-1.amazonaws.com/1742749641662.png",
-    title: "TIC TAC TOE",
-    link: "https://tictactoe-five-ruby.vercel.app/",
-    description: "Simple tic tac toe game"
-  },
+
+
 ]
 
 const skills = [
