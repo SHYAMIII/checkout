@@ -11,7 +11,7 @@ const projects = [
      {
     image: "twilio.png",
     title: "AI_SDR",
-    link: "https://github.com/SHYAMIII/ai_call_agent",
+    link: "https://github.com/SHYAMIII/SDR_SF",
     description: "AI call bot to manage costumer's query"
   },
     {
