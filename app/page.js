@@ -10,7 +10,7 @@ import { useState } from 'react'
 const projects = [
      {
     image: "twilio.png",
-    title: "AI_SDR",
+    title: "AI-SDR",
     link: "https://github.com/SHYAMIII/SDR_SF",
     description: "AI call bot to manage costumer's query"
   },
@@ -42,7 +42,12 @@ const projects = [
     link: "https://ecomm-admin-orpin.vercel.app",
     description: "Admin dashboard for e-commerce platform"
   },
-
+ {
+    image: "shakahari.png",
+    title: "Shakahari",
+    link: "https://shakahari-16-mp41.vercel.app",
+    description: "A website for a manufacture company"
+  },
        {
     image: "voiceTOtext.png",
     title: "SpeakEasy 2.0",
