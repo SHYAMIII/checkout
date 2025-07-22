@@ -3,7 +3,7 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 import Layout from '@/components/Layout'
 import { TbApi } from 'react-icons/tb'
 import { FaReact, FaNodeJs, FaPython, FaHtml5, FaCss3, FaJs, FaGit, FaGithub, FaCode } from 'react-icons/fa'
-import { SiNextdotjs, SiExpress, SiTailwindcss, SiMongodb, SiCplusplus, SiRedux } from 'react-icons/si'
+import { SiNextdotjs,SiResponsive,SiLeetcode,SiC,SiJavascript, SiExpress, SiTailwindcss, SiMongodb, SiCplusplus, SiRedux } from 'react-icons/si'
 import { useState } from 'react'
 
 // ... (keep your projects and skills data same)
@@ -57,13 +57,12 @@ const projects = [
 
 
 ]
-
 const skills = [
   // Core Frontend
   { name: "HTML5", icon: FaHtml5, x: 15, y: 15 },
   { name: "CSS3", icon: FaCss3, x: 15, y: 30 },
   { name: "JavaScript", icon: FaJs, x: 15, y: 45 },
-  { name: "ES6/ES5", icon: FaJs, x: 15, y: 60 },
+  { name: "ES6+", icon: SiJavascript, x: 15, y: 60 }, // better semantic icon
 
   // React Ecosystem
   { name: "React", icon: FaReact, x: 30, y: 20 },
@@ -82,7 +81,7 @@ const skills = [
 
   // Programming
   { name: "Python", icon: FaPython, x: 85, y: 20 },
-  { name: "C", icon: SiCplusplus, x: 85, y: 40 },
+  { name: "C", icon: SiC, x: 85, y: 40 },          // changed to SiC
   { name: "C++", icon: SiCplusplus, x: 85, y: 60 },
 
   // Tools
@@ -90,9 +89,9 @@ const skills = [
   { name: "GitHub", icon: FaGithub, x: 65, y: 75 },
 
   // Concepts
-  { name: "DSA", icon: FaCode, x: 15, y: 75 },
+  { name: "DSA", icon: SiLeetcode, x: 15, y: 75 }, // better suited than FaCode
   { name: "API Integration", icon: TbApi, x: 30, y: 75 },
-  { name: "Responsive UI", icon: FaCss3, x: 85, y: 75 }
+  { name: "Responsive UI", icon: SiResponsive, x: 85, y: 75 } // changed from FaCss3
 ];
 
 export default function Home() {
