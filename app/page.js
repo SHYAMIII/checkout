@@ -1,9 +1,16 @@
 "use client"
 import { motion, useScroll, useTransform } from 'framer-motion'
 import Layout from '@/components/Layout'
-import { TbApi } from 'react-icons/tb'
-import { FaReact, FaNodeJs, FaPython, FaHtml5, FaCss3, FaJs, FaGit, FaGithub, FaCode } from 'react-icons/fa'
-import { SiNextdotjs,SiResponsive,SiLeetcode,SiC,SiJavascript, SiExpress, SiTailwindcss, SiMongodb, SiCplusplus, SiRedux } from 'react-icons/si'
+import {
+  FaHtml5, FaCss3, FaJs, FaReact, FaNodeJs,
+  FaPython, FaGit, FaGithub
+} from "react-icons/fa";
+import {
+  SiNextdotjs, SiRedux, SiExpress, SiMongodb,
+  SiTailwindcss, SiCplusplus, SiC, SiLeetcode, SiJavascript
+} from "react-icons/si";
+import { TbApi } from "react-icons/tb";
+import { MdDevices } from "react-icons/md"
 import { useState } from 'react'
 
 // ... (keep your projects and skills data same)
@@ -91,7 +98,7 @@ const skills = [
   // Concepts
   { name: "DSA", icon: SiLeetcode, x: 15, y: 75 }, // better suited than FaCode
   { name: "API Integration", icon: TbApi, x: 30, y: 75 },
-  { name: "Responsive UI", icon: SiResponsive, x: 85, y: 75 } // changed from FaCss3
+  { name: "Responsive UI", icon: MdDevices, x: 85, y: 75 } // changed from FaCss3
 ];
 
 export default function Home() {
